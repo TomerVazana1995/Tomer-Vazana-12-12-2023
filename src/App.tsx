@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [mode, setMode] = useState("light");
-  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+  const theme = useMemo(() => createTheme(themeSettings(mode) as any), [mode]);
 
   return (
     <div className="app">
