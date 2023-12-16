@@ -47,7 +47,7 @@ const Home = () => {
             `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search`,
             {
               params: {
-                apikey: import.meta.env.VITE_API_KEY,
+                apikey: "DoLBVCg6b3KHKxccugjfR9pw6H8tyGEG",
                 q: `${geolocation.latitude},${geolocation.longitude}`,
               },
             }
@@ -82,7 +82,7 @@ const Home = () => {
         try {
           const { data } = await axios.get(
             `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityKey}`,
-            { params: { apikey: import.meta.env.VITE_API_KEY } }
+            { params: { apikey: "DoLBVCg6b3KHKxccugjfR9pw6H8tyGEG" } }
           );
 
           setCityWeekWeather({

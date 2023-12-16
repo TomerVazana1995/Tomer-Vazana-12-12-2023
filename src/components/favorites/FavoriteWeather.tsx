@@ -31,7 +31,7 @@ const FavoriteWeather = ({ city, cityKey }: Props) => {
         try {
           const { data } = await axios.get(
             `http://dataservice.accuweather.com/currentconditions/v1/${cityKey}`,
-            { params: { apikey: import.meta.env.VITE_API_KEY } }
+            { params: { apikey: "DoLBVCg6b3KHKxccugjfR9pw6H8tyGEG" } }
           );
           setCurrentWeather({
             temp: data[0].Temperature.Imperial.Value,
