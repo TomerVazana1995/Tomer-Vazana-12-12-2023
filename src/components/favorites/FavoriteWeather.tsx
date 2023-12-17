@@ -30,7 +30,7 @@ const FavoriteWeather = ({ city, cityKey }: Props) => {
       const getFavoriteCurrentWeather = async () => {
         try {
           const { data } = await axios.get(
-            `http://dataservice.accuweather.com/currentconditions/v1/${cityKey}`,
+            `https://dataservice.accuweather.com/currentconditions/v1/${cityKey}`,
             { params: { apikey: "0T4iEUmne18Bhf4NNjihAEaRTrEDJrAo" } }
           );
           setCurrentWeather({

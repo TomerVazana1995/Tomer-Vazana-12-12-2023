@@ -26,7 +26,7 @@ const SearchBar = ({ setCityKey, setCityName }: Props) => {
   const getCities = async () => {
     try {
       const response = await axios.get(
-        "http://dataservice.accuweather.com/locations/v1/cities/autocomplete",
+        "https://dataservice.accuweather.com/locations/v1/cities/autocomplete",
         { params: { apikey: "0T4iEUmne18Bhf4NNjihAEaRTrEDJrAo" } }
       );
       setCities(response.data ?? []);
