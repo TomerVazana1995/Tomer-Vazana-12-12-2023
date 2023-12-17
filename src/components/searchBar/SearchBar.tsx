@@ -27,13 +27,14 @@ const SearchBar = ({ setCityKey, setCityName }: Props) => {
     try {
       const response = await axios.get(
         "http://dataservice.accuweather.com/locations/v1/cities/autocomplete",
-        { params: { apikey: "DoLBVCg6b3KHKxccugjfR9pw6H8tyGEG" } }
+        { params: { apikey: "0T4iEUmne18Bhf4NNjihAEaRTrEDJrAo" } }
       );
       setCities(response.data ?? []);
     } catch (error) {
       toast.error("Something went wrong while searching for your city...", {
         position: toast.POSITION.TOP_LEFT,
       });
+      return;
     }
   };
 
